@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\alancreativeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +24,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/alancreative', [alancreativeController::class, 'index'])->name('alancreative');
+
+Route::get('/bill', [alancreativeController::class, 'bill'])->name('bill');
