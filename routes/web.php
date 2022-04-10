@@ -17,9 +17,9 @@ use App\Http\Controllers\alancreativeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -29,6 +29,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/alancreative', [alancreativeController::class, 'index'])->name('alancreative');
+Route::get('/', [alancreativeController::class, 'index'])->name('alancreative');
 
 Route::get('/bill', [alancreativeController::class, 'bill'])->name('bill');
